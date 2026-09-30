@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Саха Кута — Золотой код вашего оберега</title>
+    <!-- Подключаем элегантный шрифт для заголовков -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0a0806;
+            --bg-card: #13100c;
+            --gold-light: #f3e5ab;
+            --gold-main: #d4af37;
+            --gold-dark: #aa7c11;
+            --text-light: #f5f2eb;
+            --text-muted: #a89f91;
+            --border-gold: rgba(212, 175, 55, 0.25);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            /* Мягкий радиальный градиент для создания атмосферы таинственности */
+            background-image: radial-gradient(circle at center, #1c1710 0%, #0a0806 100%);
+            color: var(--text-light);
+            font-family: 'Roboto', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Декоративные астрологические/нумерологические фоновые элементы */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: radial-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 0);
+            background-size: 24px 24px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .wrapper {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 480px;
+        }
+
+        .container {
+            background-color: var(--bg-card);
+            border: 2px solid var(--border-gold);
+            padding: 45px 35px;
+            border-radius: 4px; /* Классический строгий стиль вместо скругленных углов */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 15px rgba(212, 175, 55, 0.05);
+            text-align: center;
+            position: relative;
+        }
+
+        /* Изящная классическая золотая рамка внутри контейнера */
+        .container::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            pointer-events: none;
+            border-radius: 2px;
+        }
+
+        .shop-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--gold-main);
+            background: linear-gradient(to bottom, #ffe89e 0%, #d4af37 50%, #866100 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0 25px;
+        }
+
+        .divider::before, .divider::after {
+            content: "";
+            height: 1px;
+            width: 40px;
+            background: linear-gradient(to right, transparent, var(--gold-main), transparent);
+        }
+
+        .divider-dot {
+            color: var(--gold-main);
+            font-size: 10px;
+            margin: 0 10px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .input-field {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--gold-light);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-gold);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--gold-main);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.15);
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #b89327 0%, #d4af37 50%, #aa7c11 100%);
+            border: none;
+            color: var(--bg-dark);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #d4af37 0%, #ffe89e 50%, #d4af37 100%);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        .result-box {
+            margin-top: 35px;
+            padding-top: 30px;
+            border-top: 1px dashed var(--border-gold);
+            display: none;
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .result-box.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gold-ring {
+            width: 90px;
+            height: 90px;
+            border: 2px solid var(--gold-main);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            position: relative;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+	    background-size: cover;
+	    background-position: center;
+	    transition: background-image 0.5s ease;
+        }
+
+        /* Тонкое дополнительное кольцо декора */
+        .gold-ring::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+        }
+
+        .talisman-number {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+        }
+
+        .result-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: var(--gold-main);
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .result-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-weight: 300;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="shop-name">Саха Кута</div>
+            <div class="divider">
+                <span class="divider-dot">✦</span>
+            </div>
+            
+            <h1>Расчет Золотого Кода Судьбы</h1>
+            
+            <div class="input-field">
+                <label for="firstName">Ваше Имя</label>
+                <input type="text" id="firstName" placeholder="Введите имя русскими буквами" autocomplete="off">
+            </div>
+
+            <div class="input-field">
+                <label for="lastName">Ваша Фамилия</label>
+                <input type="text" id="lastName" placeholder="Введите фамилию русскими буквами" autocomplete="off">
+            </div>
+            
+            <button onclick="calculateTalisman()">Узнать свой оберег</button>
+            
+            <div class="result-box" id="resultBox">
+                <div class="gold-ring">
+                    <div class="talisman-number" id="talismanNumber">0</div>
+                </div>
+                <div class="result-title">Ваш числовой оберег</div>
+                <div class="result-desc" id="resultText"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Традиционное нумерологическое соответствие для русского алфавита
+        const russianAlphabetMap = {
+            'а': 1, 'и': 1, 'с': 3, 'ъ': 1,
+            'б': 2, 'й': 1, 'т': 4, 'ы': 1,
+            'в': 6, 'к': 2, 'у': 6, 'ь': 1,
+            'г': 3, 'л': 2, 'ф': 8, 'э': 6,
+            'д': 4, 'м': 4, 'х': 5, 'ю': 7,
+            'е': 5, 'н': 5, 'ц': 3, 'я': 2,
+            'ё': 5, 'о': 7, 'ч': 7,
+            'ж': 2, 'п': 8, 'ш': 2,
+            'з': 7, 'р': 2, 'щ': 9
+        };
+
+        // Авторские нумерологические описания для чисел-оберегов
+        const talismanDescriptions = {
+            1: "Единица - символ начала всего сущего, входит в состав других чисел, но сама неделима. Талисман «Золотой код 1» изображен в виде солнца.<br>Единица наделяет людей этого числа жаждой уважения, стремлением к лидерству, желанием быть выше и лучше всех.<br><br>Данная цифра придаст Вашему характеру гордость, великодушие и инициативность. Но стоит быть осторожнее, так как единица привносит и негатив - это любование самим собой, недоверчивость, конфликтность, стремление ставить превыше всего свои собственные интересы, задевая этим окружающих.<br>",
+            2: "Двойка - символ луны. Талисман «Золотой код 2» изображен в виде круга.<br>Талисман двойка придаст Вашему характеру особое дружелюбие, духовную эмоциональность, верность, особую чувствительность к проблемам других.<br><br>Двойка символ дипломатии, поэтому тебе легко обходить острые углы при общении, избегать ссор и недоразумений.<br><br>Двойка считается символом соперничества и противоречия. Это число в качестве талисмана может помочь в преодолении жизненных трудностей.<br>",
+            3: "Тройка - загадочное число. Талисман «Золотой код 3» изображен в виде треугольника.<br>Этот талисман делает людей оптимистами. Они не страшаются принимать решения и рисковать, так как уверены, что всегда будут в выйгрыше. Число три настраивает своих владельцев на положительное отношение к себе и окружающим. Тройка притягивает как магнит счастье и гармонию, поэтому очень редко люди, чей талисман число три, бывают несчастными.<br><br>Тройка - оберег дает своему обладателю чувство ответственности, стремление к усовершенствованию. Это число способно придать человеку постоянный поиск идеала, вечное стремление к признанию своих заслуг.<br>",
+            4: "Четверка - символ всего нового. Талисман «Золотой код 4» изображен в виде четырехугольника.<br>Обладатели этого талисмана стремятся к неизведанному и отричают все старое. Талисман четверка наделит Вас нестандартным мышлением, интересом к духовной жизни и природе, независимость от жизненных обстоятельств.<br><br>Четверка делает людей очень общительными. В новом году с помощью талисмана найдете своих единомышленников, сообщество, где будут рады Вам. Это число - символ стабильности и порядка, поэтому особы, сделавшие ее своим оберегом, добросовестны в труде, подвижны, общительы, очень организованны. любят все разложить по полочкам. Талисман усилит Вашу замечательную память и хорошие организаторские способности.<br>",
+            5: "Пятерка - символ успеха и завершенности. Талисман «Золотой код 5» изображен в виде пятиконечной звезды.<br>Талисман пятерка дарит человеку особое очарование и буквально притягивает к нему других людей. Кроме того, оно помогает наладить отношения с другими людьми.<br><br>Талисман пятерка дает возможность в каждом деле найти рациональное зерно, проявить инициативу. Обладатели оберега с цифрой пять всегда стремятся попробовать свои силы в редких профессиях. Постоянство и рутинная работа очень плохо действуют на них. Пятерка дает такие качества как сообразительность, работоспособность, стремление к познанию, обаяние.<br>",
+            6: "Шестерка символ стабильности, надежности и стремления к идеалу. Талисман «Золотой код 6» изображен в виде шестиконечной звезды.<br>Люди, которые выбрали этот оберег обычно очень верные, честные и порядочные. При этом они упорно и уверенно продвигаются к своей самой главной цели в жизни.<br><br>Шестерка - придает обладателю веселый нрав, шарм и обояние. К тому же шестерка притягивает успех и деньги. С этим талисманом человек достигает всего достаточно легко, не прилагая больших усилий, он очень везуч. Особенно в тех сферах, где нужно много общаться с людьми.<br>",
+            7: "Семерка - магическое число. Талисман «Золотой код 7» изображен в виде равностороннего семиугольника.<br>Талисман семерка настривает на мистический лад, позволяет чутко реагировать на настроение окружающих и предугадывать события.<br><br>Семерка отличный оберег, когда речь идет о музыкальных конкурсах или в впоросах, связанных с духовной сферой. В новом году владельцев талисмана семерка ждет везение и удача. Но стоит насторожиться легких, но обещающих горы проектов.<br>",
+            8: "Восьмерка - символ бесконечности. Талисман «Золотой код 8» изображен в виде двух колец, сцепленных между собой.<br>Талисман в виде восьмерки может принести Вам материальную обеспеченность. Вам все будет доставаться не так легко, но Вы все равно будете идти к своей цели. Оберег придаст вашему характеру трезвый взгляд на вещи, верность.<br><br>В новом году талисаман восьмерка принесет укрепление отношений с близкими друзьями, также терпения, упорства и силу духа.<br>",
+            9: "Девятка - это символ последнего рывка, когда до достижения цели остается всего чуть-чуть. Талисман «Золотой код 9» изображен в виде цветка с девятью лепестками. Поэтому те, чьим счастливым числом является девятка, всегда занимают главенствующее место в своем окружении. Они твердо знают, чего хотят и к чему стремятся.<br>Девятка помогает завоевывать все своими силами. Этот талисман придает больше мужества и воли на пути к победе.<br><br>Девятка делает человека нетерпимым к подчинению, поэтому редко можно увидеть людей, чьим таписманом является девятка, на вторых ролях, - чаще всего это лидеры и руководители.<br><br>Девятка - талисман способна придать характеру человека инициативность, предприимчивость, энергичность и уверенность в себе. Однако слишком своевольных людей девятка может наградить беспощадностью, бесцере-монностью, презрительным отношением ко всем, кого они считают ниже себя.<br>"
+        };
+
+        function calculateTalisman() {
+            const firstName = document.getElementById('firstName').value.trim().toLowerCase();
+            const lastName = document.getElementById('lastName').value.trim().toLowerCase();
+            
+            const resultBox = document.getElementById('resultBox');
+            const talismanNumber = document.getElementById('talismanNumber');
+            const resultText = document.getElementById('resultText');
+
+            if (!firstName || !lastName) {
+                alert('Пожалуйста, заполните оба поля: и Имя, и Фамилию!');
+                return;
+            }
+
+            // Объединяем имя и фамилию для общего подсчета
+            const fullName = firstName + lastName;
+            let sum = 0;
+            let hasRussianLetters = false;
+
+            // Подсчет суммы по таблице Золотого Кода
+            for (let char of fullName) {
+                if (russianAlphabetMap[char] !== undefined) {
+                    sum += russianAlphabetMap[char];
+                    hasRussianLetters = true;
+                }
+            }
+
+            // Валидация на наличие русских букв
+            if (!hasRussianLetters) {
+                alert('Пожалуйста, вводите Имя и Фамилию только русскими буквами.');
+                return;
+            }
+
+            // Нумерологическое свертывание до одной цифры (от 1 до 9)
+            while (sum > 9) {
+                sum = sum.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+            }
+
+            // Вывод полученного Золотого Кода и Оберега
+            talismanNumber.textContent = sum;
+            resultText.innerHTML = talismanDescriptions[sum];
+            
+            // Плавное проявление результатов с анимацией
+            resultBox.style.display = 'block';
+            setTimeout(() => {
+                resultBox.classList.add('show');
+            }, 50);
+	    document.querySelector('.gold-ring').style.backgroundImage = "linear-gradient(rgba(19, 16, 12, 0.5), rgba(19, 16, 12, 0.5)), url('" + sum + ".jpg')";
+        }
+    </script>
+</body>
+</html>
